@@ -1,0 +1,72 @@
+[2024-09-02T20:06:26.209+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:06:26.211+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_creation.py for tasks to queue
+[2024-09-02T20:06:26.214+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:06:26.214+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:06:30.686+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:06:30.681+0000] {anonymize.py:21} INFO - DataRetriever initialized with endpoint: None
+[2024-09-02T20:06:30.687+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:06:30.687+0000] {anonymize.py:24} INFO - Intentado recuperar data de la API.
+[2024-09-02T20:06:30.782+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:06:30.782+0000] {anonymize.py:37} ERROR - Request error: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+[2024-09-02T20:06:30.980+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:06:30.783+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_creation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_creation.py", line 29, in <module>
+    data = retrieve_data.retrieve_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/modules/anonymize.py", line 26, in retrieve_data
+    response = requests.get(self.endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+[2024-09-02T20:06:30.983+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:06:33.594+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_creation.py took 7.392 seconds
+[2024-09-02T20:09:13.880+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:09:13.888+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_creation.py for tasks to queue
+[2024-09-02T20:09:13.893+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:09:13.890+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:09:16.214+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:09:16.213+0000] {anonymize.py:21} INFO - DataRetriever initialized with endpoint: None
+[2024-09-02T20:09:16.215+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:09:16.214+0000] {anonymize.py:24} INFO - Intentado recuperar data de la API.
+[2024-09-02T20:09:16.218+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:09:16.217+0000] {anonymize.py:37} ERROR - Request error: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+[2024-09-02T20:09:16.264+0000] {logging_mixin.py:188} INFO - [2024-09-02T20:09:16.218+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_creation.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_creation.py", line 29, in <module>
+    data = retrieve_data.retrieve_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/modules/anonymize.py", line 26, in retrieve_data
+    response = requests.get(self.endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+[2024-09-02T20:09:16.267+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_creation.py
+[2024-09-02T20:09:16.305+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_creation.py took 2.434 seconds
