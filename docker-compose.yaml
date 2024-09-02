@@ -84,7 +84,7 @@ x-airflow-common:
       condition: service_healthy
     postgres:
       condition: service_healthy
-
+# Cada Contenedor
 services:
   postgres:
     image: postgres:13
